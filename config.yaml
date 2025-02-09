@@ -221,8 +221,14 @@ window_rules:
       
   - commands: ['move --workspace a2']
     match:
-      
       - window_process: { regex: 'd3' }
+  - commands: ['move --workspace a3']
+    match:
+      - window_process: { regex: 'Rhino' }
+  - commands: ['move --workspace a4']
+    match:
+      - window_process: { regex: 'Adobe Media Encoder' }
+      
   - commands: ['set-tiling']
     match:
       
