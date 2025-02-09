@@ -12,7 +12,7 @@ general:
   config_reload_commands: []
 
   # Whether to automatically focus windows underneath the cursor.
-  focus_follows_cursor: true
+  focus_follows_cursor: false
 
   # Whether to switch back and forth between the previously focused
   # workspace when focusing the current workspace.
@@ -216,7 +216,7 @@ window_rules:
         window_class: { regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]' }
       - window_process: { equals: 'PowerToys' }
         window_title: { regex: '.*? - Peek' }
-      - window_process: { equals: 'Lively' }
+      - window_process: { equals: 'Rhino' }
         window_class: { regex: 'HwndWrapper' }
       
   - commands: ['move --workspace a2']
@@ -400,6 +400,6 @@ keybindings:
 
   # Cycle workspaces within the current monitor (uses monitor_workspace_cycle.py)
   - commands: ['shell-exec pythonw c:/Projetos/glazeWM/monitor_workspace_cycle.py next']
-    bindings: ['alt+shift+s']
+    bindings: ['F13']
   - commands: ['shell-exec pythonw c:/Projetos/glazeWM/monitor_workspace_cycle.py prev']
-    bindings: ['alt+shift+a']
+    bindings: ['F14']
