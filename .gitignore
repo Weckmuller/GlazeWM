@@ -1,0 +1,10 @@
+# Ignore OS-specific and editor-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore build and dependency directories (customize as needed)
+node_modules/
+dist/
+build/
+
+# ...existing ignore rules...
