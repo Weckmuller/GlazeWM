@@ -121,7 +121,7 @@ window_behavior:
 
 workspaces:
   - name: 'a1'
-    display_name: "1"
+    display_name: "code"
     bind_to_monitor: 0
     keep_alive: true
   - name: 'a2'
@@ -133,11 +133,11 @@ workspaces:
     bind_to_monitor: 0
     keep_alive: true
   - name: 'a4'
-    display_name: "encoder"
+    display_name: "blender"
     bind_to_monitor: 0
     keep_alive: true
   - name: 'a5'
-    display_name: "5"
+    display_name: "encoder"
     bind_to_monitor: 0
     keep_alive: true
   - name: 'a6'
@@ -210,6 +210,7 @@ window_rules:
       # Ignores picture-in-picture windows for browsers.
       - window_title: { regex: '[Pp]icture.in.[Pp]icture' }
         window_class: { regex: 'Chrome_WidgetWin_1|MozillaDialogClass' }
+      
 
       # Ignore rules for various 3rd-party apps.
       - window_process: { equals: 'PowerToys' }
@@ -219,13 +220,22 @@ window_rules:
       - window_process: { equals: 'Rhino' }
         window_class: { regex: 'HwndWrapper' }
       
+  - commands: ['move --workspace a1']
+    match:
+      - window_process: { regex: 'Code' }
   - commands: ['move --workspace a2']
     match:
       - window_process: { regex: 'd3' }
   - commands: ['move --workspace a3']
     match:
       - window_process: { regex: 'Rhino' }
+  - commands: ['move --workspace a3']
+    match:
+      - window_process: { regex: 'Rhino' }
   - commands: ['move --workspace a4']
+    match:
+      - window_process: { regex: 'blender' }
+  - commands: ['move --workspace a5']
     match:
       - window_process: { regex: 'Adobe Media Encoder' }
       
