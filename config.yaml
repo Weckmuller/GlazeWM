@@ -219,6 +219,10 @@ window_rules:
         window_title: { regex: '.*? - Peek' }
       - window_process: { equals: 'Rhino' }
         window_class: { regex: 'HwndWrapper' }
+      - window_process: { equals: 'firefox' }
+        window_class: { regex: 'MozillaDialogClass' }
+      - window_process: { equals: 'd3manager' }
+        window_class: { regex: 'Qt5152QWindowIcon' }
       
   - commands: ['move --workspace a1']
     match:
